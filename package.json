@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
-  "files":["dist/**.js"],
+  "files": [
+    "dist/**.js"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
@@ -19,13 +21,17 @@
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "eslint": "^7.28.0",
     "jest": "^27.0.4",
+    "jest-ts-webcompat-resolver": "^1.0.0",
     "ts-jest": "^27.0.2",
     "typescript": "^4.3.2",
     "typescript-eslint": "^0.0.1-alpha.0"
   },
   "jest": {
     "preset": "ts-jest/presets/default-esm",
-    "roots": ["src"],
+    "resolver": "jest-ts-webcompat-resolver",
+    "roots": [
+      "src"
+    ],
     "globals": {
       "ts-jest": {
         "useESM": true
