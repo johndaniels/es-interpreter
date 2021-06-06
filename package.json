@@ -1,5 +1,5 @@
 {
-  "name": "es-interpreter",
+  "name": "@johndaniels/es-interpreter",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",

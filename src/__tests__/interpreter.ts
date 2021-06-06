@@ -1,5 +1,5 @@
-import Interpreter from '../interpreter';
-import InterpreterObject from '../object';
+import Interpreter from '../interpreter.js';
+import InterpreterObject from '../object.js';
 
 const JAVASCRIPT = `
 var x=1;

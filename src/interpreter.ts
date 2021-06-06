@@ -6,7 +6,7 @@
  */
 
 import acorn from 'acorn';
-import InterpreterObject from './object';
+import InterpreterObject from './object.js';
 
 // Try to load Node's vm module.
 let nodevm;
