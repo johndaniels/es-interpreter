@@ -1,0 +1,35 @@
+{
+  "name": "es-interpreter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "files":["dist/**.js"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "lint": "eslint 'src/**'"
+  },
+  "author": "John Daniels",
+  "license": "Apache-2.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "eslint": "^7.28.0",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.3.2",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "roots": ["src"],
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    }
+  }
+}
